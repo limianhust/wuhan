@@ -17,6 +17,7 @@ p标签表示一个段落，img标签表示一个图片，a表示一个链接。
 
 ![无标题.png](http://upload-images.jianshu.io/upload_images/4061504-c3af705f80c1f518.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 典型代码如下：
+
 ```
 
 <code><html lang="en">
@@ -38,4 +39,6 @@ p标签表示一个段落，img标签表示一个图片，a表示一个链接。
 <h2 class="hsajsb" id="gsxah"></h2>
 </body>
 </html>
+
 ```
+
