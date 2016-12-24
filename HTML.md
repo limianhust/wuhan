@@ -13,6 +13,7 @@ p标签表示一个段落，img标签表示一个图片，a表示一个链接。
 <h2>一个典型的HTML文件<h2>
 典型代码如下：
 ```
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,4 +34,7 @@ p标签表示一个段落，img标签表示一个图片，a表示一个链接。
 <h2 class="hsajsb" id="gsxah"></h2>
 </body>
 </html>
+
 ```
+
+
