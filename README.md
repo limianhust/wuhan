@@ -12,27 +12,3 @@ p标签表示一个段落，img标签表示一个图片，a表示一个链接。
 + table，表格标签
 
 <p>要查看更多标签，请到[W3CSchool](http://www.w3school.com.cn/)</p>
-<h2>一个典型的HTML文件<h2>
-<pre><code>
-	<html lang="en">
-
-	<head>
-		<meta charset="UTF-8">
-		<title>Document</title>
-	```</head>
-	```<body>
-	```<div class="item">
-		```<h1 class="item">一级标题</h1>
-	```<ul id="ik">
-		```<li class="cl">列表1</li>
-		```<li class="cl">列表2</li>
-		```<li class="cl">列表3</li>
-		```<li class="cl">列表4</li>
-	```</ul>
-	```</div>
-	```<p class="test">这是一个段落</p>
-	```<h2 class="hsajsb" id="gsxah"></h2>
-	```</body>
-	```</html>
-</pre></code>
-
