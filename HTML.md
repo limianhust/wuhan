@@ -14,10 +14,10 @@ p标签表示一个段落，img标签表示一个图片，a表示一个链接。
 典型代码如下：
 ```
 <!DOCTYPE html>
-<code><html lang="en">
-<code><head>
-	<code><meta charset="UTF-8">
-	<code><title>Document</title>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
 </head>
 <body>
 <div class="item">
