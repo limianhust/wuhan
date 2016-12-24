@@ -13,17 +13,12 @@ p标签表示一个段落，img标签表示一个图片，a表示一个链接。
 
 <p>要查看更多标签，请到[W3CSchool](http://www.w3school.com.cn/)</p>
 <h2>一个典型的HTML文件<h2>
+<pre><code>
+<html lang="en">
 
-
-![无标题.png](http://upload-images.jianshu.io/upload_images/4061504-c3af705f80c1f518.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-典型代码如下：
-
-```
-
-```<code><html lang="en">
-```<code><head>
-	```<code><meta charset="UTF-8">
-	```<code><title>Document</title>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
 ```</head>
 ```<body>
 ```<div class="item">
@@ -39,6 +34,5 @@ p标签表示一个段落，img标签表示一个图片，a表示一个链接。
 ```<h2 class="hsajsb" id="gsxah"></h2>
 ```</body>
 ```</html>
-
-```
+</pre></code>
 
