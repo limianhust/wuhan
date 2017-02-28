@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>wuhan</title>
+    <title>WuHan修改</title>
     
     <style>
         @font-face {
-    font-family: 'iconfont';  /* project id 231555 */
-    src: url('//at.alicdn.com/t/font_di0edvxuz6m3g14i.eot');
-    src: url('//at.alicdn.com/t/font_di0edvxuz6m3g14i.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_di0edvxuz6m3g14i.woff') format('woff'),
-    url('//at.alicdn.com/t/font_di0edvxuz6m3g14i.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_di0edvxuz6m3g14i.svg#iconfont') format('svg');
-}
+            font-family: 'iconfont';  /* project id 231555 */
+            src: url('http://at.alicdn.com/t/font_di0edvxuz6m3g14i.eot');
+            src: url('http://at.alicdn.com/t/font_di0edvxuz6m3g14i.eot?#iefix') format('embedded-opentype'),
+            url('http://at.alicdn.com/t/font_di0edvxuz6m3g14i.woff') format('woff'),
+            url('http://at.alicdn.com/t/font_di0edvxuz6m3g14i.ttf') format('truetype'),
+            url('http://at.alicdn.com/t/font_di0edvxuz6m3g14i.svg#iconfont') format('svg');
+        }
 *{
     margin: 0;
     padding: 0;
@@ -67,7 +67,12 @@ div#welcome{
     font-size: 20px;
 }
 #index a:hover{
-    background: #111;
+
+    /*background: #aaaaaa;*/
+    /*border-radius: 10px;*/
+    /*padding: 10px 20px;*/
+    /*margin: 5px 20px;*/
+    color: #ffffff;
 
 }
 #welcome{
@@ -313,7 +318,7 @@ footer span{
     margin: 0 20px;
 }
 a.light{
-    background: chartreuse;
+    background: #aaaaaa;
     border-radius: 10px;
     padding: 10px 20px;
     margin: 5px 20px;
@@ -345,17 +350,17 @@ $(document).ready(
             var contact_top = $("#contact").offset().top;
             if(windowtop<geography_top){
                 $("ul#index a").removeClass("light");
-            } else if(windowtop>geography_top&&windowtop<culture_top){
+            } else if(windowtop>=geography_top&&windowtop<culture_top){
                 $("#togeo").addClass("light");
                 $("ul#index a:not(#togeo)").removeClass("light");
-            } else if(windowtop > culture_top && windowtop < history_top){
+            } else if(windowtop >= culture_top && windowtop < history_top){
                 $("#tocul").addClass("light").addClass("light");
                 $("ul#index a:not(#tocul)").removeClass("light");
             }
-            else if(windowtop>history_top && windowtop<contact_top){
+            else if(windowtop>= history_top && windowtop<contact_top){
                 $("#tohis").addClass("light").addClass("light");
                 $("ul#index a:not(#tohis)").removeClass("light");
-            } else if (windowtop>contact_top){
+            } else if (windowtop>= contact_top){
                 $("#tocon").addClass("light").addClass("light");
                 $("ul#index a:not(#tocon)").removeClass("light");
             }
@@ -470,371 +475,3 @@ $(document).ready(
         <span>Privacy Policy  Terms of Use</span>
     </footer>
 </body>
-</html>    display: inline-block;
-    padding: 20px 20px 20px 20px;
-    margin: 0;
-    letter-spacing: 10px;
-    color: inherit;
-    text-decoration: none;
-    font-size: 20px;
-}
-#index a:hover{
-    background: #111;
-
-}
-#welcome{
-    text-align: center;
-    height: 800px;
-    background-color: #ffffff;
-}
-#welcome h1{
-    text-align: center;
-    font-size: 50px;
-    color: #eeeeee;
-    padding-bottom: 30px;
-    padding-top: 100px;
-}
-#welcome p{
-    text-align: center;
-    color: #eeeeee;
-    padding-bottom: 30px;
-    font-size: 60px;
-}
-#welcome #join{
-    font-size: 30px;
-    padding: 10px 20px;
-    display: inline-block;
-    margin-top:  20px;
-    background: #fed136;
-    border: 5px solid #fed136;
-    border-radius: 5px;
-    color: #fff;
-}
-.style1 .img1 img{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-
-}
-.style1 #jianbian{
-    background: linear-gradient(#aaaaaa,#ffffff);
-}
-div.style1>h1{
-    text-align: center;
-    margin-bottom: 30px;
-    padding-top: 100px;
-
-}
-
-.style1 p{
-    text-align: center;
-    margin-bottom: 10px;
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.style1 .style1-flexbox{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.style1 .section{
-    width: 300px;
-    text-align: center;
-    padding: 20px 10px;
-}
-.style1 .section p{
-    padding: 20px 10px;
-}
-.style1 .section h3{
-    padding-top: 20px;
-}
-
-.style2 h1{
-    text-align: center;
-    padding-top: 100px;
-}
-.style2 p{
-    text-align: center;
-    margin: 30px;
-}
-.style2 .img2{
-    text-align: center;
-    margin-bottom: -5px;
-
-}
-.style2 .img2 img{
-    width: 136px;
-    height: 136px;
-    border-radius: 50%;
-    border: 5px solid #f1f1f1;
-}
-.style2 .img2:not(.first):before{
-    content: "";
-    display: block;
-    position: relative;
-    left: 50%;
-    top: 0;
-    height: 100px;
-    width: 2px;
-    background: #f1f1f1;
-    z-index: 0;
-}
-div#history{
-    margin-bottom: 150px;
-}
-.style2 .history-discri-left{
-    position: absolute;
-    display: inline-block;
-    width: 400px;
-    right: 60%;
-    margin-top: 10px;
-    text-align: right;
-}
-.style2 .history-discri-right{
-    position: absolute;
-    display: inline-block;
-    width: 400px;
-    left: 60%;
-    margin-top: 10px;
-    text-align: left;
-}
-div#culture{
-    background: #eeeeee;
-}
-#culture-ul>li.culture-list{
-    list-style-type: none;
-    margin: 30px 15px;
-}
-ul#culture-ul>li.culture-list>a>img{
-    width: 360px;
-    height: 260px;
-    background: #eac236;
-    opacity: 1;
-}
-li.culture-list h4{
-    text-align: center;
-    margin-top: 15px;
-    font-weight: bold;
-}
-li.culture-list p{
-    padding-bottom: 20px;
-    color: #333;
-}
-ul#culture-ul li.culture-list{
-    background: #ffffff;
-}
-ul#culture-ul li.culture-list img:hover{
-    animation: 1s;
-    animation-name: to-background;
-    background: #eac236;
-    animation-fill-mode: forwards;
-}
-
-@keyframes to-background {
-    from{
-        opacity: 1;
-    }
-    to{
-        opacity: 0.3;
-    }
-}
-div#contact{
-    background: url("http://p1.bpimg.com/567571/63c242fc1b07c1d4.jpg") ;
-    padding-top: 55px;
-    padding-bottom: 150px;
-}
-div#contact h1{
-    color: #ffffff;
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-div#contact p{
-    color: #ffffff;
-    margin-bottom: 40px;
-}
-form.contact .contact-flexcon{
-    display: flex;
-}
-form.contact .contact-left{
-    display: inline-block;
-    width: 50%;
-    margin-left: 30px;
-    margin-right: 10px;
-}
-div#contact-input-button{
-    text-align: center;
-    margin-top: 20px;
-
-}
-div#contact-input-button input::selection{
-    text-shadow: none;
-}
-div#contact-input-button input{
-    height: 66px;
-    width: 200px;
-    border-radius: 5px;
-    text-shadow: none;
-    text-transform: none;
-    display: inline-block;
-    background: #fed136;
-    color: #ffffff;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-
-form.contact .contact-left input[type="text"]{
-    width: 100%;
-    height: 60px;
-    border-radius: 5px;
-    display: inline-block;
-    margin-bottom: 10px;
-    text-indent: 10px;
-}
-form.contact .contact-right{
-    display: inline-block;
-    width: 49%;
-    margin-right: 30px;
-    margin-left: 10px;
-}
-textarea#you-massage{
-    display: inline-block;
-    width: 100%;
-    height: 210px;
-    border-radius: 5px;
-    line-height: 3em;
-    text-indent: 10px;
-}
-form.contact input[type="button"]{
-    display: inline-block;
-}
-.weichat-linkin-github{
-    font-family: iconfont;
-    font-size: 40px;
-    color: #555;
-}
-footer{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 50px;
-}
-footer span{
-    line-height: 56px;
-    margin: 0 20px;
-}
-    </style>
-    <script>
-    function anchor_scroll(){
- document.getElementById("know-more").click();
- }
- </script>
-</head>
-<body>
-    <nav class="nav">
-    <ul id="index">
-      <li><a href="#contact">联系我们</a></li>
-
-      <li><a href="#history">历史</a></li>
-      <li><a href="#culture">人文</a></li>
-      <li><a href="#geography">地理</a></li>
-    </ul>
-    <span id="city"><a href="#welcome">Wuhan China</a></span>
-    </nav>
-    <div id="welcome">
-    <h1>Welcome To Wuhan</h1>
-    <p>IT'S NICE TO MEET YOU</p>
-    <input type="button" id="join" value="Know More" onclick="anchor_scroll();">
-    <a href="#geography" id="know-more" style="display: none">跳转到geogrophy位置</a>
-</div>
-    <div id="geography" class="style1">
-    <h1 id="jianbian">江城-武汉</h1>
-    <p>汉江与长江交汇,拥有最大城市内陆湖</p>
-    <div class="style1-flexbox">
-        <div class="section">
-        <div class="img1">
-            <img src="http://i1.piimg.com/567571/5acb0525fa941f8d.jpg" alt="">
-        </div>
-        <h3>长江</h3>
-        <p>长江与其最大的支流汉水交汇于此，将武汉市区分为汉口、汉阳以及武昌等三部分，俗称武汉三镇。武汉长江大桥位于中国湖北省武汉市，横卧于汉阳龜山和武昌蛇山之间的长江江面之上，是长江上第一座铁路、公路两用桥，因此又被称为“万里长江第一桥”</p>
-    </div>
-        <div class="section">
-        <div class="img1">
-            <img src="http://i1.piimg.com/567571/b276408fe33adff6.jpg" alt="">
-        </div>
-        <h3>汉江</h3>
-        <p>汉水，亦称汉江，又名襄河，古称沔miǎn水，是长江最长的支流。钟祥以下，汉江进入江汉平原。下游两岸均修筑堤防，汉江在其约束下，从钟祥南流至沙洋县，然后转向东流。至潜江市泽口，右岸有汉江最大分流东荆河。然后经过天门市、仙桃市，流至汉川市，左岸纳汈汊湖、汉北河。最后进入武汉市，于汉口龙王庙汇入长江。</p>
-    </div>
-        <div class="section">
-        <div class="img1">
-            <img src="http://i1.piimg.com/567571/f6e4bf0af0da323f.jpg" alt="">
-        </div>
-        <h3>东湖</h3>
-        <p>东湖，位于中国湖北省武汉市武昌区东部，故得此名。东湖为中国最大的城中湖，因湖光山色风景秀丽，东湖是武汉市最大的风景游览地，为首批国家重点风景名胜区和国家5A级风景区。根据自然和人文环境不同，东湖风景区分为听涛、磨山、落雁、白马、吹笛、珞洪六个游览区。</p>
-    </div>
-    </div>
-</div>
-    <div id="culture" class="style1">
-        <h1>人文</h1>
-        <p>惟楚有材 于斯为盛</p>
-        <div class="style1-flexbox">
-            <ul id="culture-ul" class="style1-flexbox">
-                <li class="culture-list"><a href="#"><img src="http://p1.bpimg.com/567571/87f4df08ba1b794f.jpg" alt=""></a>
-                    <h4>武汉大学</h4>
-                    <p>百年名校，曾为民国四大名校，现为教育部985工程大学</p>
-                </li>
-                <li class="culture-list"><a href="#"><img src="http://p1.bqimg.com/567571/89a821d28d6f6de2.jpg" alt=""></a>
-                    <h4>华中科技大学</h4>
-                    <p>共和国长子，为新中国建立的第一批工学院，现在为教育部985工程大学</p>
-                </li>
-                <li class="culture-list"><a href="#"><img src="http://p1.bqimg.com/567571/d2a2c6982e231316.jpg" alt=""></a>
-                    <h4>曾侯乙“编钟”</h4>
-                    <p>曾侯乙编钟共65件，分为三层八组：上层3组为钮钟，19件；中层3组为南钟，33件，分短枚、无枚、长枚三式；下层为两组大型长枚甫钟，12件，另有镈钟1件</p>
-                </li>
-                <li class="culture-list"><a href="#"><img src="http://i1.piimg.com/567571/0ed85001816d7bc3.jpg" alt=""></a><h4>古琴台</h4>
-                    <p>又名伯牙台，是为纪念俞伯牙弹琴遇知音钟子期而修建的  纪念性建筑。古琴台建于北宋，堂前汉白玉方形石台，传为伯牙抚琴处</p></li>
-                <li class="culture-list"><a href="#"><img src="http://i1.piimg.com/567571/d4b5c7d3048cefad.jpg" alt=""></a><h4>木兰天池</h4>
-                    <p>这里的风光特点与九寨沟、庐山有诸多相似之处，相传是木兰将军的外婆家，是木兰将军小时候生活、习武的地方。</p></li>
-                <li class="culture-list"><a href="#"><img src="http://i1.piimg.com/567571/be8b83e15a6542a9.jpg" alt=""></a><h4>龟山电视塔</h4>
-                    <p>我国第一座具有综合旅游服务功能的钢筋混凝土结构  的广播电视发射塔，曾有“亚洲桅杆”之称。</p></li>
-            </ul>
-        </div>
-    </div>
-    <div id="history" class="style2">
-        <h1>历史</h1>
-        <p>中国近代工业的发源地</p>
-        <div class="img2 first"><span class="history-discri-left">武汉市古有夏汭、鄂渚之名。武汉地区考古发现的历史可以上溯距今6000年的新石器时代，1956年，湖北省博物馆对东湖 (武汉)之滨的放鹰台进行考古发掘，发现了石斧、石锛以及鱼叉等新石器时代遗存，经认定属于屈家岭文化。</span><img src="http://p1.bqimg.com/567571/652d363341b7fa33.jpg" alt=""></div>
-        <div class="img2"><span class="history-discri-right">春秋战国时代，武汉属于楚国范畴，留下了一些遗迹传说。战国·郑·列御寇《列子·汤问》所记载的俞伯牙与锺子期“高山流水遇知音”的典故就发生在这里。</span><img src="http://p1.bpimg.com/567571/e35b3c2b476e18ab.jpg" alt=""></div>
-        <div class="img2"><span class="history-discri-left">清代后期直至二十世纪初的武汉享有“东方芝加哥”的美誉，是中国第二大城市，也是中国主要几个经济、金融、工业、交通、文化中心之一。右图为武汉江汉关。</span><img src="http://i1.piimg.com/567571/ab9a218439fb9b56.jpg" alt=""></div>
-        <div class="img2"><span class="history-discri-right">新中国成立后，大批重工业企业在武汉建立，自此，武汉由“工商金融和近代工业中心”迅速的转变为中华人民共和国的工业基地，成为“共和国”的“长子”之一。</span><img src="http://p1.bqimg.com/567571/b07751a4c2c90413.jpg" alt="" id="img2"></div>
-    </div>
-    <div id="contact" class="style1">
-        <h1>CONTACT US</h1>
-        <p>hene hnytrew her in</p>
-        <form action="" method="get" class="contact">
-
-            <div class="contact-flexcon">
-            <div class="contact-left">
-
-                    <input type="text" name="name" id="name" placeholder=" YOU NAME*"><br>
-                    <input type="text" name="email" id="email" placeholder=" YOU EMAIL*"><br>
-                    <input type="text" name="phone" id="phone" placeholder=" YOU PHONE*"><br>
-
-            </div>
-            <div class="contact-right">
-                <textarea name="you-massage" id="you-massage" cols="30" rows="10" placeholder=" YOU MASSAGE*"></textarea>
-            </div></div>
-            <div id="contact-input-button"><input type="button" value="SEND MESSAGE"></div>
-        </form>
-    </div>
-    <footer><span>Copyright © Limian Website 2017</span>
-        <div class="weichat-linkin-github">
-            <span class="weichat">&#xe632;</span>
-            <span class="linkin">&#xe630;</span>
-            <span class="github">&#xe69f;</span>
-        </div>
-        <span>Privacy Policy  Terms of Use</span>
-    </footer>
-</body>
-</html>
