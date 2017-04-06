@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>WuHan修改</title>
+    <title>WuHan</title>
     
     <style>
         @font-face {
@@ -254,6 +254,13 @@ form.contact .contact-left{
     width: 50%;
     margin-left: 30px;
     margin-right: 10px;
+    
+}
+form.contact .contact-left input{
+    font-size: 18px;
+}
+form.contact .contact-right textarea{
+    font-size: 18px;
 }
 div#contact-input-button{
     text-align: center;
@@ -324,14 +331,14 @@ a.light{
     margin: 5px 20px;
 }
     </style>
-    <script src="jquery-3.1.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script>/**
  * Created by limian on 2017/2/10.
  */
 //id为knon-more的button绑定标签a点击事件，跳转到指定位置
-//  function anchor_scroll(){
-//  document.getElementById("know-more").click();
-//  }
+ function anchor_scroll(){
+  document.getElementById("know-more").click();
+  }
 $(document).ready(
     function () {
 
@@ -381,11 +388,11 @@ $(document).ready(
     <span id="city"><a href="#welcome">Wuhan China</a></span>
     </nav>
     <div id="welcome">
-    <h1>Welcome To Wuhan</h1>
-    <p>IT'S NICE TO MEET YOU</p>
-    <input type="button" id="join" value="Know More" onclick="anchor_scroll();">
-    <a href="#geography" id="know-more" style="display: none">跳转到geogrophy位置</a>
-</div>
+      <h1>Welcome To Wuhan</h1>
+      <p>IT'S NICE TO MEET YOU</p>
+      <input type="button" id="join" value="登陆或注册" onclick="anchor_scroll()">
+      <a href="#geography" id="know-more" style="display: none">跳转到geogrophy位置</a>
+    </div>
     <div id="geography" class="style1">
     <h1 id="jianbian">江城-武汉</h1>
     <p>汉江与长江交汇,拥有最大城市内陆湖</p>
@@ -475,3 +482,4 @@ $(document).ready(
         <span>Privacy Policy  Terms of Use</span>
     </footer>
 </body>
+</html>
