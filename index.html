@@ -5,13 +5,157 @@
     <meta charset="UTF-8">
 
     <title>WuHan</title>
-
+    <!--<style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul,li{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .carousel{
+           
+            overflow: hidden;
+            position: relative;
+            
+            padding: 0;
+            margin: 0;
+        }
+        .carousel .imgList{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            position: absolute;
+            
+        }
+        .carousel img{
+            
+            /*height: 267px;*/
+        }
+        .carousel .button{
+            width: 30px;
+            height: 30px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #999;
+            opacity: 0.6;
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+        }
+        .carousel .buttonPre{
+            left: 5px;
+        }
+        .carousel .buttonNext{
+            right: 5px;
+        }
+        .bullet{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            bottom: 20px;
+            
+            position: absolute;
+        }
+        .bullet li{
+            height: 4px;
+            width: 20px;
+            border-radius: 2px;
+            background-color: #ccc;
+            margin: 0 4px;
+        }
+        .carousel .active{
+            background-color: #666;
+        }
+    </style>-->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        ul,
+        li {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .carousel {
+            width: 100%;
+            height: 949px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .carousel .imgList {
+            position: absolute;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+        }
+        
+        .carousel .button {
+            width: 50px;
+            height: 50px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 30px;
+            color: #ffffff;
+            background-color: #999;
+            opacity: 0.6;
+            position: absolute;
+            top: 50%;
+            margin-top: -8%;
+        }
+        
+        .carousel .buttonPre {
+            left: 5px;
+        }
+        
+        .carousel .buttonNext {
+            right: 5px;
+        }
+        
+        .bullet {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            bottom: 30%;
+            width: 200px;
+            margin-left: 620px;
+            position: absolute;
+        }
+        
+        .bullet li {
+            height: 10px;
+            width: 30px;
+            border-radius: 2px;
+            background-color: #333;
+            margin: 0 4px;
+            opacity: .6;
+            cursor: pointer;
+        }
+        
+        .carousel .active {
+            background-color: #ccc;
+        }
+    </style>
     <style>
         @font-face {
             font-family: 'iconfont';
             /* project id 295219 */
-            src: url('//at.alicdn.com/t/font_dmwoexjzgjnka9k9.eot');
-            src: url('//at.alicdn.com/t/font_dmwoexjzgjnka9k9.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_dmwoexjzgjnka9k9.woff') format('woff'), url('//at.alicdn.com/t/font_dmwoexjzgjnka9k9.ttf') format('truetype'), url('//at.alicdn.com/t/font_dmwoexjzgjnka9k9.svg#iconfont') format('svg');
+            src: url('http://at.alicdn.com/t/font_dmwoexjzgjnka9k9.eot');
+            src: url('http://at.alicdn.com/t/font_dmwoexjzgjnka9k9.eot?#iefix') format('embedded-opentype'), url('http://at.alicdn.com/t/font_dmwoexjzgjnka9k9.woff') format('woff'), url('http://at.alicdn.com/t/font_dmwoexjzgjnka9k9.ttf') format('truetype'), url('http://at.alicdn.com/t/font_dmwoexjzgjnka9k9.svg#iconfont') format('svg');
         }
         
         * {
@@ -19,22 +163,32 @@
             padding: 0;
             text-decoration: none;
         }
-        
-        div#welcome {
+        /*div#welcome {
             background: url("http://i1.piimg.com/519918/917f22b18781b460.jpg");
             background-position: 0 -1000px;
             background-size: 100%;
-        }
+        }*/
         
         .nav {
             width: 100%;
-            background: #222222;
+            background: rgba(34, 34, 34, .4);
             color: rgb(254, 209, 54);
             overflow: auto;
             vertical-align: middle;
             position: fixed;
+            display: flex;
+            top: 0;
+            flex-wrap: nowrap;
+            justify-content: space-between;
             font-family: sans-serif Author;
             z-index: 1;
+        }
+        
+        .nav #index {
+            width: 480px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
         }
         
         .nav a {
@@ -47,29 +201,31 @@
             margin-left: 50px;
         }
         
+        .nav #city:hover a {
+            color: #fff;
+        }
+        
         #index {
             list-style: none;
             margin: 0;
-            padding: 0 30px 0 0;
-            background: #333;
-            display: inline-block;
-            overflow: hidden;
-            float: right;
+            padding: 0 0 0 0;
+            /*background: #333;*/
         }
         
         #index li {
-            display: inline-block;
-            float: right;
+            /*text-align: center;
+            vertical-align: middle;
+            line-height: 100%;*/
             margin: 0;
             padding: 0;
         }
         
-        #index a {
-            display: inline-block;
-            padding: 20px 20px 20px 20px;
+        #index .no-arrive {
+            padding: 10px 20px 10px 20px;
+            line-height: 60px;
             margin: 0;
             letter-spacing: 10px;
-            color: inherit;
+            color: #fed136;
             text-decoration: none;
             font-size: 20px;
         }
@@ -80,38 +236,6 @@
             /*padding: 10px 20px;*/
             /*margin: 5px 20px;*/
             color: #ffffff;
-        }
-        
-        #welcome {
-            text-align: center;
-            height: 800px;
-            background-color: #ffffff;
-        }
-        
-        #welcome h1 {
-            text-align: center;
-            font-size: 50px;
-            color: #eeeeee;
-            padding-bottom: 30px;
-            padding-top: 100px;
-        }
-        
-        #welcome p {
-            text-align: center;
-            color: #eeeeee;
-            padding-bottom: 30px;
-            font-size: 60px;
-        }
-        
-        #welcome #join {
-            font-size: 30px;
-            padding: 10px 20px;
-            display: inline-block;
-            margin-top: 20px;
-            background: #fed136;
-            border: 5px solid #fed136;
-            border-radius: 5px;
-            color: #fff;
         }
         
         .style1 .img1 img {
@@ -293,6 +417,11 @@
             font-size: 18px;
         }
         
+        form.contact .contact-left input:focus {
+            outline: none;
+            background-color: #fed136;
+        }
+        
         form.contact .contact-right textarea {
             font-size: 18px;
         }
@@ -368,13 +497,276 @@
             margin: 0 20px;
         }
         
-        a.light {
-            background: #aaaaaa;
+        #index .no-arrive.light {
+            background: #fed136;
             border-radius: 10px;
-            padding: 10px 20px;
+            padding: 10px 6px 10px 14px;
             margin: 5px 20px;
+            color: #fff;
+        }
+        
+        .img-container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .img-container .row-ct {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+        }
+        
+        .content {
+            position: relative;
+            width: 95%;
+            margin: 0 auto;
+        }
+        
+        .item {
+            position: absolute;
+            width: 200px;
+            margin-right: 10px;
+            margin-top: 10px;
+            transition: all 1s;
+        }
+        
+        .h1 {
+            height: 200px;
+            background-color: #f4b300;
+        }
+        
+        .h2 {
+            height: 300px;
+            background-color: #691BB8;
+        }
+        
+        .h3 {
+            height: 400px;
+            background-color: #006ac1;
         }
     </style>
+
+</head>
+
+<body>
+    <nav class="nav">
+        <span id="city"><a href="#welcome">Wuhan China</a></span>
+        <ul id="index">
+
+
+
+
+            <li><a class="no-arrive" id="togeo" href="#geography">地理</a></li>
+            <li><a class="no-arrive" id="tocul" href="#culture">人文</a></li>
+            <li><a class="no-arrive" id="tohis" href="#history">历史</a></li>
+
+
+            <li><a class="no-arrive" id="tocon" href="#contact">联系我们</a></li>
+        </ul>
+
+    </nav>
+    <div class="carousel" id="carousel1">
+        <ul class="imgList">
+
+            <li><img data-src="http://ww1.sinaimg.cn/large/d5642af4gy1ffbhnzbe88j20tv0jwmyo.jpg" src="http://ww1.sinaimg.cn/large/d5642af4gy1ffbhnzbe88j20tv0jwmyo.jpg"
+                    alt=""></li>
+            <li><img src="http://ww1.sinaimg.cn/large/d5642af4gy1ffbhnzec15j20tv0jwdiw.jpg" alt=""></li>
+            <li><img src="http://ww1.sinaimg.cn/large/d5642af4gy1ffbhnzcsv8j20m80eqq9i.jpg" alt=""></li>
+            <li><img src="http://ww1.sinaimg.cn/large/d5642af4gy1ffbhnzllxmj21410u0k6f.jpg" alt=""></li>
+            <li><img src="http://ww1.sinaimg.cn/large/d5642af4gy1ffbhnz8wvvj20tv0jw410.jpg" alt=""></li>
+        </ul>
+
+        <a class="button buttonPre" href="">&lt;</a>
+        <a class="button buttonNext" href="">&gt;</a>
+
+
+        <ul class="bullet">
+            <li class="active"></li>
+
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div id="geography" class="style1">
+        <h1 id="jianbian">江城-武汉</h1>
+        <p>汉江与长江交汇,拥有最大城市内陆湖</p>
+        <div class="style1-flexbox">
+            <div class="section">
+                <div class="img1">
+                    <img src="http://i1.piimg.com/567571/5acb0525fa941f8d.jpg" alt="">
+                </div>
+                <h3>长江</h3>
+                <p>长江与其最大的支流汉水交汇于此，将武汉市区分为汉口、汉阳以及武昌等三部分，俗称武汉三镇。武汉长江大桥位于中国湖北省武汉市，横卧于汉阳龜山和武昌蛇山之间的长江江面之上，是长江上第一座铁路、公路两用桥，因此又被称为“万里长江第一桥”</p>
+            </div>
+            <div class="section">
+                <div class="img1">
+                    <img src="http://i1.piimg.com/567571/b276408fe33adff6.jpg" alt="">
+                </div>
+                <h3>汉江</h3>
+                <p>汉水，亦称汉江，又名襄河，古称沔miǎn水，是长江最长的支流。钟祥以下，汉江进入江汉平原。下游两岸均修筑堤防，汉江在其约束下，从钟祥南流至沙洋县，然后转向东流。至潜江市泽口，右岸有汉江最大分流东荆河。然后经过天门市、仙桃市，流至汉川市，左岸纳汈汊湖、汉北河。最后进入武汉市，于汉口龙王庙汇入长江。</p>
+            </div>
+            <div class="section">
+                <div class="img1">
+                    <img src="http://i1.piimg.com/567571/f6e4bf0af0da323f.jpg" alt="">
+                </div>
+                <h3>东湖</h3>
+                <p>东湖，位于中国湖北省武汉市武昌区东部，故得此名。东湖为中国最大的城中湖，因湖光山色风景秀丽，东湖是武汉市最大的风景游览地，为首批国家重点风景名胜区和国家5A级风景区。根据自然和人文环境不同，东湖风景区分为听涛、磨山、落雁、白马、吹笛、珞洪六个游览区。</p>
+            </div>
+        </div>
+    </div>
+    <div id="culture" class="style1">
+        <h1>人文</h1>
+        <p>惟楚有材 于斯为盛</p>
+        <div class="style1-flexbox">
+            <ul id="culture-ul" class="style1-flexbox">
+                <li class="culture-list">
+                    <a href="#" class="img">
+                        <img src="http://a4-q.mafengwo.net/s7/M00/AA/78/wKgB6lTPDgGAMKIBAARPH_6kXH809.jpeg?imageMogr2%2Fthumbnail%2F%211020x540r%2Fgravity%2FCenter%2Fcrop%2F%211020x540%2Fquality%2F100"
+                            alt="">
+
+                    </a>
+                    <h4>武汉大学</h4>
+                    <p>百年名校，曾为民国四大名校，现为教育部985工程大学</p>
+                </li>
+                <li class="culture-list">
+                    <a href="#"><img src="http://i1.piimg.com/519918/89a821d28d6f6de2.jpg" alt=""></a>
+                    <h4>华中科技大学</h4>
+                    <p>共和国长子，为新中国建立的第一批工学院，现在为教育部985工程大学</p>
+                </li>
+                <li class="culture-list">
+                    <a href="#"><img src="http://n4-q.mafengwo.net/s5/M00/45/4B/wKgB3FGL99OAQ6TzAAW1ujcyx0U82.jpeg?imageMogr2%2Fthumbnail%2F%21690x450r%2Fgravity%2FCenter%2Fcrop%2F%21690x450%2Fquality%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cDovL24xLXEubWFmZW5nd28ubmV0L3M4L00wMC82Mi83OS93S2dCcFZodUN6Q0FJa3RIQUFBTkc4TDlCUU0xNjAucG5n%2Fgravity%2FNorthWest%2Fdx%2F20%2Fdy%2F21"
+                            alt=""></a>
+                    <h4>曾侯乙“编钟”</h4>
+                    <p>曾侯乙编钟共65件，分为三层八组：上层3组为钮钟，19件；中层3组为南钟，33件，分短枚、无枚、长枚三式；下层为两组大型长枚甫钟，12件，另有镈钟1件</p>
+                </li>
+                <li class="culture-list">
+                    <a href="#"><img src="http://i2.muimg.com/519918/0ed85001816d7bc3.jpg" alt=""></a>
+                    <h4>古琴台</h4>
+                    <p>又名伯牙台，是为纪念俞伯牙弹琴遇知音钟子期而修建的 纪念性建筑。古琴台建于北宋，堂前汉白玉方形石台，传为伯牙抚琴处</p>
+                </li>
+                <li class="culture-list">
+                    <a href="#"><img src="http://a1-q.mafengwo.net/s8/M00/33/C3/wKgBpVWnTp2ASRHMAAGeF8huijM70.jpeg?imageMogr2%2Fthumbnail%2F%21690x450r%2Fgravity%2FCenter%2Fcrop%2F%21690x450%2Fquality%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cDovL24xLXEubWFmZW5nd28ubmV0L3M4L00wMC82Mi83OS93S2dCcFZodUN6Q0FJa3RIQUFBTkc4TDlCUU0xNjAucG5n%2Fgravity%2FNorthWest%2Fdx%2F20%2Fdy%2F21"
+                            alt=""></a>
+                    <h4>木兰天池</h4>
+                    <p>这里的风光特点与九寨沟、庐山有诸多相似之处，相传是木兰将军的外婆家，是木兰将军小时候生活、习武的地方。</p>
+                </li>
+                <li class="culture-list">
+                    <a href="#"><img src="http://i1.piimg.com/567571/be8b83e15a6542a9.jpg" alt=""></a>
+                    <h4>龟山电视塔</h4>
+                    <p>我国第一座具有综合旅游服务功能的钢筋混凝土结构 的广播电视发射塔，曾有“亚洲桅杆”之称。</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="history" class="style2">
+        <h1>历史</h1>
+        <p>中国近代工业的发源地</p>
+        <div class="img2 first"><span class="history-discri-left">武汉市古有夏汭、鄂渚之名。武汉地区考古发现的历史可以上溯距今6000年的新石器时代，1956年，湖北省博物馆对东湖 (武汉)之滨的放鹰台进行考古发掘，发现了石斧、石锛以及鱼叉等新石器时代遗存，经认定属于屈家岭文化。</span>
+            <img src="http://c1-q.mafengwo.net/s5/M00/8B/66/wKgB3FFCDXKALMdvAAFv5jiw2g806.jpeg?imageMogr2%2Fthumbnail%2F%21690x450r%2Fgravity%2FCenter%2Fcrop%2F%21690x450%2Fquality%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cDovL24xLXEubWFmZW5nd28ubmV0L3M4L00wMC82Mi83OS93S2dCcFZodUN6Q0FJa3RIQUFBTkc4TDlCUU0xNjAucG5n%2Fgravity%2FNorthWest%2Fdx%2F20%2Fdy%2F21"
+                alt=""></div>
+        <div class="img2"><span class="history-discri-right">春秋战国时代，武汉属于楚国范畴，留下了一些遗迹传说。战国·郑·列御寇《列子·汤问》所记载的俞伯牙与锺子期“高山流水遇知音”的典故就发生在这里。</span>
+            <img src="http://c2-q.mafengwo.net/s7/M00/7A/B1/wKgB6lO2I5yAYvGDAAfU_ANyIRA92.jpeg?imageMogr2%2Fthumbnail%2F%21690x450r%2Fgravity%2FCenter%2Fcrop%2F%21690x450%2Fquality%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cDovL24xLXEubWFmZW5nd28ubmV0L3M4L00wMC82Mi83OS93S2dCcFZodUN6Q0FJa3RIQUFBTkc4TDlCUU0xNjAucG5n%2Fgravity%2FNorthWest%2Fdx%2F20%2Fdy%2F21"
+                alt=""></div>
+        <div class="img2"><span class="history-discri-left">清代后期直至二十世纪初的武汉享有“东方芝加哥”的美誉，是中国第二大城市，也是中国主要几个经济、金融、工业、交通、文化中心之一。右图为武汉江汉关。</span>
+            <img src="http://i1.piimg.com/567571/ab9a218439fb9b56.jpg" alt=""></div>
+        <div class="img2"><span class="history-discri-right">新中国成立后，大批重工业企业在武汉建立，自此，武汉由“工商金融和近代工业中心”迅速的转变为中华人民共和国的工业基地，成为“共和国”的“长子”之一。</span>
+            <img src="http://i1.piimg.com/519918/b07751a4c2c90413.jpg" alt="" id="img2"></div>
+    </div>
+    <div class="img-container">
+
+    </div>
+    <div class="content">
+        <div class="item h1">
+            1
+        </div>
+        <div class="item h3">
+            2
+        </div>
+        <div class="item h2">
+            3
+        </div>
+        <div class="item h1">
+            4
+        </div>
+        <div class="item h1">
+            5
+        </div>
+        <div class="item h3">
+            6
+        </div>
+        <div class="item h3">
+            7
+        </div>
+        <div class="item h2">
+            8
+        </div>
+        <div class="item h1">
+            9
+        </div>
+        <div class="item h3">
+            10
+        </div>
+        <div class="item h3">
+            11
+        </div>
+        <div class="item h3">
+            12
+        </div>
+        <div class="item h2">
+            13
+        </div>
+        <div class="item h2">
+            14
+        </div>
+        <div class="item h1">
+            15
+        </div>
+        <div class="item h3">
+            16
+        </div>
+        <div class="item h3">
+            17
+        </div>
+        <div class="item h3">
+            18
+        </div>
+        <div class="item h2">
+            19
+        </div>
+        <div class="item h2">
+            20
+        </div>
+    </div>
+    <div id="contact" class="style1">
+        <h1>CONTACT US</h1>
+        <p>hene hnytrew her in</p>
+        <form action="" method="get" class="contact">
+
+            <div class="contact-flexcon">
+                <div class="contact-left">
+
+                    <input type="text" name="name" id="name" placeholder=" YOU NAME*"><br>
+                    <input type="text" name="email" id="email" placeholder=" YOU EMAIL*"><br>
+                    <input type="text" name="phone" id="phone" placeholder=" YOU PHONE*"><br>
+
+                </div>
+                <div class="contact-right">
+                    <textarea name="you-massage" id="you-massage" cols="30" rows="10" placeholder=" YOU MASSAGE*"></textarea>
+                </div>
+            </div>
+            <div id="contact-input-button"><input type="button" value="SEND MESSAGE"></div>
+        </form>
+    </div>
+    <footer><span>Copyright © Limian Website 2017</span>
+        <div class="weichat-linkin-github">
+            <span class="weichat">&#xe60a;</span>
+            <span class="linkin">&#xe608;</span>
+            <span class="github">&#xe69f;</span>
+        </div>
+        <span>Privacy Policy  Terms of Use</span>
+    </footer>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script>
         /*
@@ -421,133 +813,273 @@
             }
         );
     </script>
-</head>
+    <script>
+        var bodyWidth = $('.carousel').width()
+        $('.carousel img').css('width', bodyWidth)
 
-<body>
-    <nav class="nav">
-        <ul id="index">
-            <li><a id="tocon" href="#contact">联系我们</a></li>
+        var Carousel = (function () {
+            function _Carousel(ct, width) {
+                this.ct = ct
+                this.width = width || $(ct).width()
+                $(ct).css('width', this.width)
+                this.imgList = ct.querySelector('.imgList')
+                this.animiating = false
+                this.pageIndex = 0
 
-            <li><a id="tohis" href="#history">历史</a></li>
-            <li><a id="tocul" href="#culture">人文</a></li>
-            <li><a id="togeo" href="#geography">地理</a></li>
-        </ul>
-        <span id="city"><a href="#welcome">Wuhan China</a></span>
-    </nav>
-    <div id="welcome">
-        <h1>Welcome To Wuhan</h1>
-        <p>IT'S NICE TO MEET YOU</p>
-        <input type="button" id="join" value="登陆或注册" onclick="anchor_scroll()">
-        <a href="#geography" id="know-more" style="display: none">跳转到geogrophy位置</a>
-    </div>
-    <div id="geography" class="style1">
-        <h1 id="jianbian">江城-武汉</h1>
-        <p>汉江与长江交汇,拥有最大城市内陆湖</p>
-        <div class="style1-flexbox">
-            <div class="section">
-                <div class="img1">
-                    <img src="http://i1.piimg.com/567571/5acb0525fa941f8d.jpg" alt="">
-                </div>
-                <h3>长江</h3>
-                <p>长江与其最大的支流汉水交汇于此，将武汉市区分为汉口、汉阳以及武昌等三部分，俗称武汉三镇。武汉长江大桥位于中国湖北省武汉市，横卧于汉阳龜山和武昌蛇山之间的长江江面之上，是长江上第一座铁路、公路两用桥，因此又被称为“万里长江第一桥”</p>
-            </div>
-            <div class="section">
-                <div class="img1">
-                    <img src="http://i1.piimg.com/567571/b276408fe33adff6.jpg" alt="">
-                </div>
-                <h3>汉江</h3>
-                <p>汉水，亦称汉江，又名襄河，古称沔miǎn水，是长江最长的支流。钟祥以下，汉江进入江汉平原。下游两岸均修筑堤防，汉江在其约束下，从钟祥南流至沙洋县，然后转向东流。至潜江市泽口，右岸有汉江最大分流东荆河。然后经过天门市、仙桃市，流至汉川市，左岸纳汈汊湖、汉北河。最后进入武汉市，于汉口龙王庙汇入长江。</p>
-            </div>
-            <div class="section">
-                <div class="img1">
-                    <img src="http://i1.piimg.com/567571/f6e4bf0af0da323f.jpg" alt="">
-                </div>
-                <h3>东湖</h3>
-                <p>东湖，位于中国湖北省武汉市武昌区东部，故得此名。东湖为中国最大的城中湖，因湖光山色风景秀丽，东湖是武汉市最大的风景游览地，为首批国家重点风景名胜区和国家5A级风景区。根据自然和人文环境不同，东湖风景区分为听涛、磨山、落雁、白马、吹笛、珞洪六个游览区。</p>
-            </div>
-        </div>
-    </div>
-    <div id="culture" class="style1">
-        <h1>人文</h1>
-        <p>惟楚有材 于斯为盛</p>
-        <div class="style1-flexbox">
-            <ul id="culture-ul" class="style1-flexbox">
-                <li class="culture-list">
-                    <a href="#"><img src="http://a4-q.mafengwo.net/s7/M00/AA/78/wKgB6lTPDgGAMKIBAARPH_6kXH809.jpeg?imageMogr2%2Fthumbnail%2F%211020x540r%2Fgravity%2FCenter%2Fcrop%2F%211020x540%2Fquality%2F100"
-                            alt=""></a>
-                    <h4>武汉大学</h4>
-                    <p>百年名校，曾为民国四大名校，现为教育部985工程大学</p>
-                </li>
-                <li class="culture-list">
-                    <a href="#"><img src="http://i1.piimg.com/519918/89a821d28d6f6de2.jpg" alt=""></a>
-                    <h4>华中科技大学</h4>
-                    <p>共和国长子，为新中国建立的第一批工学院，现在为教育部985工程大学</p>
-                </li>
-                <li class="culture-list">
-                    <a href="#"><img src="http://n4-q.mafengwo.net/s5/M00/45/4B/wKgB3FGL99OAQ6TzAAW1ujcyx0U82.jpeg?imageMogr2%2Fthumbnail%2F%21690x450r%2Fgravity%2FCenter%2Fcrop%2F%21690x450%2Fquality%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cDovL24xLXEubWFmZW5nd28ubmV0L3M4L00wMC82Mi83OS93S2dCcFZodUN6Q0FJa3RIQUFBTkc4TDlCUU0xNjAucG5n%2Fgravity%2FNorthWest%2Fdx%2F20%2Fdy%2F21"
-                            alt=""></a>
-                    <h4>曾侯乙“编钟”</h4>
-                    <p>曾侯乙编钟共65件，分为三层八组：上层3组为钮钟，19件；中层3组为南钟，33件，分短枚、无枚、长枚三式；下层为两组大型长枚甫钟，12件，另有镈钟1件</p>
-                </li>
-                <li class="culture-list">
-                    <a href="#"><img src="http://i2.muimg.com/519918/0ed85001816d7bc3.jpg" alt=""></a>
-                    <h4>古琴台</h4>
-                    <p>又名伯牙台，是为纪念俞伯牙弹琴遇知音钟子期而修建的 纪念性建筑。古琴台建于北宋，堂前汉白玉方形石台，传为伯牙抚琴处</p>
-                </li>
-                <li class="culture-list">
-                    <a href="#"><img src="http://a1-q.mafengwo.net/s8/M00/33/C3/wKgBpVWnTp2ASRHMAAGeF8huijM70.jpeg?imageMogr2%2Fthumbnail%2F%21690x450r%2Fgravity%2FCenter%2Fcrop%2F%21690x450%2Fquality%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cDovL24xLXEubWFmZW5nd28ubmV0L3M4L00wMC82Mi83OS93S2dCcFZodUN6Q0FJa3RIQUFBTkc4TDlCUU0xNjAucG5n%2Fgravity%2FNorthWest%2Fdx%2F20%2Fdy%2F21"
-                            alt=""></a>
-                    <h4>木兰天池</h4>
-                    <p>这里的风光特点与九寨沟、庐山有诸多相似之处，相传是木兰将军的外婆家，是木兰将军小时候生活、习武的地方。</p>
-                </li>
-                <li class="culture-list">
-                    <a href="#"><img src="http://i1.piimg.com/567571/be8b83e15a6542a9.jpg" alt=""></a>
-                    <h4>龟山电视塔</h4>
-                    <p>我国第一座具有综合旅游服务功能的钢筋混凝土结构 的广播电视发射塔，曾有“亚洲桅杆”之称。</p>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div id="history" class="style2">
-        <h1>历史</h1>
-        <p>中国近代工业的发源地</p>
-        <div class="img2 first"><span class="history-discri-left">武汉市古有夏汭、鄂渚之名。武汉地区考古发现的历史可以上溯距今6000年的新石器时代，1956年，湖北省博物馆对东湖 (武汉)之滨的放鹰台进行考古发掘，发现了石斧、石锛以及鱼叉等新石器时代遗存，经认定属于屈家岭文化。</span>
-            <img src="http://c1-q.mafengwo.net/s5/M00/8B/66/wKgB3FFCDXKALMdvAAFv5jiw2g806.jpeg?imageMogr2%2Fthumbnail%2F%21690x450r%2Fgravity%2FCenter%2Fcrop%2F%21690x450%2Fquality%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cDovL24xLXEubWFmZW5nd28ubmV0L3M4L00wMC82Mi83OS93S2dCcFZodUN6Q0FJa3RIQUFBTkc4TDlCUU0xNjAucG5n%2Fgravity%2FNorthWest%2Fdx%2F20%2Fdy%2F21" alt=""></div>
-        <div class="img2"><span class="history-discri-right">春秋战国时代，武汉属于楚国范畴，留下了一些遗迹传说。战国·郑·列御寇《列子·汤问》所记载的俞伯牙与锺子期“高山流水遇知音”的典故就发生在这里。</span>
-            <img src="http://c2-q.mafengwo.net/s7/M00/7A/B1/wKgB6lO2I5yAYvGDAAfU_ANyIRA92.jpeg?imageMogr2%2Fthumbnail%2F%21690x450r%2Fgravity%2FCenter%2Fcrop%2F%21690x450%2Fquality%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cDovL24xLXEubWFmZW5nd28ubmV0L3M4L00wMC82Mi83OS93S2dCcFZodUN6Q0FJa3RIQUFBTkc4TDlCUU0xNjAucG5n%2Fgravity%2FNorthWest%2Fdx%2F20%2Fdy%2F21" alt=""></div>
-        <div class="img2"><span class="history-discri-left">清代后期直至二十世纪初的武汉享有“东方芝加哥”的美誉，是中国第二大城市，也是中国主要几个经济、金融、工业、交通、文化中心之一。右图为武汉江汉关。</span>
-            <img src="http://i1.piimg.com/567571/ab9a218439fb9b56.jpg" alt=""></div>
-        <div class="img2"><span class="history-discri-right">新中国成立后，大批重工业企业在武汉建立，自此，武汉由“工商金融和近代工业中心”迅速的转变为中华人民共和国的工业基地，成为“共和国”的“长子”之一。</span>
-            <img src="http://i1.piimg.com/519918/b07751a4c2c90413.jpg" alt="" id="img2"></div>
-    </div>
-    <div id="contact" class="style1">
-        <h1>CONTACT US</h1>
-        <p>hene hnytrew her in</p>
-        <form action="" method="get" class="contact">
+                this.init()
+                this.bind()
+                this.autoPlay(2000)
+            }
 
-            <div class="contact-flexcon">
-                <div class="contact-left">
+            _Carousel.prototype.init = function () {
+                var imgList = this.imgList
+                $(imgList).find('img').css('width', this.width)
+                $(imgList).css('left', 0 - this.width)
+                var imgListLength = imgList.children.length
+                var cloneFirst = imgList.children[0].cloneNode(true)
+                //console.log(imgList)
+                var cloneLast = imgList.children[imgListLength - 1].cloneNode(true)
+                imgList.appendChild(cloneFirst)
+                imgList.prepend(cloneLast)
+            }
+            _Carousel.prototype.next = function () {
+                var _this = this
 
-                    <input type="text" name="name" id="name" placeholder=" YOU NAME*"><br>
-                    <input type="text" name="email" id="email" placeholder=" YOU EMAIL*"><br>
-                    <input type="text" name="phone" id="phone" placeholder=" YOU PHONE*"><br>
+                if (!_this.animiating) {
+                    _this.animiating = true
+                    //console.log(0)
+                    $(_this.imgList).animate({ left: '-=' + bodyWidth + 'px' }, 500, function () {
+                        _this.animiating = false
+                        _this.pageIndex++
+                        //console.log(pageIndex)
+                        if (_this.pageIndex === 5) {
+                            $(_this.imgList).css('left', -bodyWidth + 'px')
+                            _this.pageIndex = 0
+                        }
+                        _this.setBullet()
+                    })
+                }
+            }
+            _Carousel.prototype.setBullet = function () {
+                var bullet = this.ct.querySelector('.bullet')
+                var bulletChildren = bullet.children
+                Array.prototype.forEach.call(bulletChildren, function (element) {
+                    element.classList.remove('active')
 
-                </div>
-                <div class="contact-right">
-                    <textarea name="you-massage" id="you-massage" cols="30" rows="10" placeholder=" YOU MASSAGE*"></textarea>
-                </div>
-            </div>
-            <div id="contact-input-button"><input type="button" value="SEND MESSAGE"></div>
-        </form>
-    </div>
-    <footer><span>Copyright © Limian Website 2017</span>
-        <div class="weichat-linkin-github">
-            <span class="weichat">&#xe60a;</span>
-            <span class="linkin">&#xe608;</span>
-            <span class="github">&#xe69f;</span>
-        </div>
-        <span>Privacy Policy  Terms of Use</span>
-    </footer>
+                })
+                bulletChildren[this.pageIndex].classList.add('active')
+            }
+            _Carousel.prototype.pre = function () {
+                if (!this.animiating) {
+                    this.animiating = true
+                    var _this = this
+                    $(this.imgList).animate({ left: '+=' + bodyWidth + 'px' }, 500, function () {
+                        _this.animiating = false
+                        _this.pageIndex--
+                        if (_this.pageIndex < 0) {
+                            $(_this.imgList).css('left', 5 * bodyWidth + 'px')
+                            _this.pageIndex = 5
+                        }
+                        _this.setBullet()
+                    })
+                }
+            }
+            _Carousel.prototype.bind = function () {
+                var _this = this
+                this.ct.querySelector('.buttonNext').addEventListener('click', function (e) {
+                    e.preventDefault()
+                    _this.next()
+                })
+                this.ct.querySelector('.buttonPre').addEventListener('click', function (e) {
+                    e.preventDefault()
+                    _this.pre()
+                })
+            }
+            _Carousel.prototype.autoPlay = function (time) {
+                var _this = this
+                var _next = _this.next.bind(_this)
+                var clock = setInterval(_next, time)
+            }
+            return {
+                init: function ($nodes) {
+                    $nodes.each(function (key, node) {
+                        new _Carousel(node)
+                    })
+                },
+                one: function (node, width) {
+                    new _Carousel(node, width)
+                }
+            }
+        })()
+        Carousel.init($('.carousel').eq(0))
+    </script>
+    <script>
+        var Exposure = (function () {
+            function _Exposure($node, callback) {
+                this.$node = $node
+                this.callback = callback
+                this.status = false
+                this.check()
+                this.bind()
+            }
+            _Exposure.prototype.isShow = function () {
+                var $node = this.$node
+                var top = $node.offset().top
+                var left = $node.off().left
+                //console.log('true')
+                if ($(window).scrollTop() < (top + $node.outerHeight()) && ($(window).scrollTop() + $(window).height()) > top) {
+                    //console.log('true')
+                    return true
+
+                } else {
+                    return false
+                }
+            }
+            _Exposure.prototype.check = function () {
+                if (this.isShow(this.$node) && !this.status) {
+                    this.callback(this.$node)
+                    this.status = true
+                    console.log('isshow')
+                } else {
+                    return false
+                }
+            }
+            _Exposure.prototype.bind = function () {
+                var _this = this
+                $(window).on('scroll', function () {
+                    _this.check()
+                })
+            }
+            return {
+                init: function ($nodes, callback) {
+                    $nodes.each(function (index, node) {
+                        new _Exposure($(node), callback)
+                    })
+                },
+                one: function ($nodes, callback) {
+                    $nodes.each(function (index, node) {
+                        new _Exposure($(node), callback)
+                    })
+                }
+            }
+        })()
+        Exposure.one($('.picture img'), function ($node) {
+            var imgUrl = $node.attr('data-src')
+            $node.attr('src', imgUrl)
+        })
+    </script>
+    <script>
+        function Barrels($ct) {
+            this.$ct = $ct
+            this.imgNum = 40
+            this.baseHeight = 200
+            this.rowList = []
+            this.loadImg()
+        }
+
+        Barrels.prototype = {
+            loadImg: function () {
+                var that = this     //这里this是调用该方法的实例对象，方法绑在原型对象上，但调用方决定this指向。
+                this.urls = this.getImgUrls(this.imgNum)
+                $.each(this.urls, function (key, url) {
+                    var img = new Image()
+                    img.src = url
+                    img.onload = function () {
+                        var originWidth = img.width
+                        var originHeight = img.height
+                        var radio = originWidth / originHeight
+                        var imgInfo = {
+                            target: img,
+                            width: that.baseHeight * radio,
+                            height: that.baseHeight,
+                            radio: radio
+                        }
+                        that.render(imgInfo)
+                    }
+                })
+            },
+            getImgUrls: function (num) {
+                num = num || 10
+                var color, width, height, urls = [];
+                for (var i = 0; i < num; i++) {
+                    color = Math.random().toString(16).substring(2, 8);
+                    width = Math.floor(Math.random() * 100 + 150);
+                    height = Math.floor(Math.random() * 30 + 150);
+                    urls.push("http://placehold.it/" + width + "x" + height + "/" + color + "/000")
+                }
+                return urls;
+            },
+            render: function (imgInfo) {
+                var rowList = this.rowList
+                var that = this
+                var rowWidth = 0
+                var rowHeight = 0
+                var clientWidth = this.$ct.width()
+                //console.log(clientWidth)
+
+                var lastImgInfo = imgInfo
+                that.rowList.push(imgInfo)
+                $.each(rowList, function (key, imgInfo) {
+                    rowWidth += imgInfo.width
+                    console.log(rowWidth)
+                    if (rowWidth > clientWidth) {
+                        that.rowList.pop()
+                        rowWidth = rowWidth - lastImgInfo.width
+                        rowHeight = that.baseHeight * clientWidth / rowWidth
+                        console.log(rowHeight)
+                        that.createRow(rowHeight)
+                        that.rowList = []
+                        that.rowList.push(lastImgInfo)
+                    }
+                })
+            },
+            createRow: function (rowHeight) {
+                var that = this
+                var $rowCt = $(`<div class="row-ct"></div>`)
+                $.each(this.rowList, function (key, imgInfo) {
+                    var $imgBox = $(`<div class="img-box"></div>`)
+                    $(imgInfo.target).css('height', rowHeight)
+                    $imgBox.append(imgInfo.target)
+                    $rowCt.append($imgBox)
+                })
+                that.$ct.append($rowCt)
+            }
+        }
+        var barrels = new Barrels($('.img-container'))
+    </script>
+    <script>
+        function waterfwll() {
+            function echo(e) {
+                console.log(e)
+            }
+            var $items = $('.content .item')
+            var nodeWidth = $items.eq(0).outerWidth(true)
+            var colNum = parseInt($('.content').width() / nodeWidth)
+            var colHeight = []
+            for (var i = 0; i < colNum; i++) {
+                colHeight[i] = 0
+            }
+            var height = colHeight[0]
+            var index = 0
+            echo($items)
+            $items.each(function () {
+                var $this = $(this)
+                var minHeight = Math.min.apply(null, colHeight)
+                echo(minHeight)
+                index = colHeight.indexOf(minHeight)
+                $this.css({
+                    left: index * nodeWidth,
+                    top: minHeight
+                })
+                colHeight[index] += $this.outerHeight(true)
+            })
+            var maxHeight = Math.max.apply(null,colHeight)
+            $('.content').css('height',maxHeight)
+        }
+        waterfwll()
+        $(window).on('resize', waterfwll)
+
+    </script>
 </body>
 
 </html>
